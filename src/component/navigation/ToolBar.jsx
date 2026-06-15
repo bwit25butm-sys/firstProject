@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../public/7S-logo.png";
+import logo from "../../../src/assets/logo.png";
 import { Link } from "react-router-dom";
 import { IoMenuSharp } from "react-icons/io5";
 
@@ -10,10 +10,10 @@ function Toolbar() {
   ];
 
   return (
-    <div className="bg-red-500 w-full">
+    <div className="bg-black w-full">
       <div className="flex w-10/12 py-6 mx-auto justify-between items-center">
         <div>
-          <img src={logo} alt="7S Logo" className="h-10" />
+          <img src={logo} alt="7S Logo" className="h-15" />
         </div>
 
         <div className=" hidden xl:flex gap-6">
@@ -21,14 +21,14 @@ function Toolbar() {
             <Link
               key={i}
               to={val.path}
-              className="font-semibold hover:text-white transition"
+              className="font-semibold text-4xl text-white hover:text-slate-300 transition"
             >
               {val.title}
             </Link>
           ))}
         </div>
-        <div>
-            <IoMenuSharp className='text-4xl' />
+        <div className="flex xl:hidden">
+          <IoMenuSharp className="text-4xl" />
         </div>
       </div>
     </div>
